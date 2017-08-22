@@ -1,0 +1,20 @@
+:local(.inp_search) {
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 8px 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+:local(.pagination_block) {
+	margin: 0 10px;
+}
+:local(.size_per_page) {
+	float: left;
+}
+:local(.pagination) {
+	float: right;
+}
+
+:local(.pagination) .pagination {
+	margin: 0;
+}
