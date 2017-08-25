@@ -51,7 +51,7 @@ const developmentConfig = {
 		stats: 'errors-only',
 		port: 9000
 	}
-}
+};
 
 module.exports = function(env) {
 	if (env === 'production') {
