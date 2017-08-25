@@ -7,13 +7,11 @@ const initialState = {
   	USERS_ONLINE_RU: 0,
   	USERS_ONLINE_UA: 0
   }
-}
+};
 
-export default function countries(state = initialState, action) {
+export default function overview(state = initialState, action) {
 	switch(action.type) {
 		case 'GET_STATS_DATA': {
-			// debugger;
-			// return Object.assign({},{users: formattedUseraArr});
 			return Object.assign({},{stats: action.payload});
 			break;
 		}

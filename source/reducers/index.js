@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import app	from './app';
+import Overview	from './overview';
 
 
 export default combineReducers({
-  // routing: routerReducer,
-  app,
-  
+    Overview,
+    routing: routerReducer
 });

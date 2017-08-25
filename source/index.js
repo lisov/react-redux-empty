@@ -10,7 +10,7 @@ import axios      from 'axios';
 
 
 import reducer    from './reducers';
-import App        from './components/App';
+import {Overview}        from './components';
 
 const store   = createStore(reducer,composeWithDevTools(applyMiddleware(thunk)));
 const history = syncHistoryWithStore(hashHistory, store);
@@ -18,7 +18,7 @@ const history = syncHistoryWithStore(hashHistory, store);
 axios.get('')
   .then((response) => {
     
-    store.dispatch({type: "GET_USERS_DATA", payload: usersArr});
+    // store.dispatch({type: "GET_USERS_DATA", payload: usersArr});
   })
   .catch(function (err) {
     console.log(err);
@@ -28,8 +28,8 @@ axios.get('')
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route component={App}>
-        <Route path="/"           component={App}/>
+      <Route component={Overview}>
+        <Route path="/"           component={Overview}/>
       </Route>
     </Router>
   </Provider>,
